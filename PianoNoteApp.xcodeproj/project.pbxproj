@@ -11,6 +11,10 @@
 		A7A58BA429A0BD4B0014F677 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A58BA329A0BD4B0014F677 /* ContentView.swift */; };
 		A7A58BA629A0BD4F0014F677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A58BA529A0BD4F0014F677 /* Assets.xcassets */; };
 		A7A58BA929A0BD4F0014F677 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A58BA829A0BD4F0014F677 /* Preview Assets.xcassets */; };
+		A7A58BB029A0BDEA0014F677 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A58BAF29A0BDEA0014F677 /* NoteView.swift */; };
+		A7A58BB329A0C2AE0014F677 /* SheetLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A58BB229A0C2AE0014F677 /* SheetLines.swift */; };
+		A7A58BB529A0E0110014F677 /* ClafView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A58BB429A0E0110014F677 /* ClafView.swift */; };
+		A7A58BB929A0EDFD0014F677 /* ChouseNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A58BB829A0EDFD0014F677 /* ChouseNote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		A7A58BA329A0BD4B0014F677 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A7A58BA529A0BD4F0014F677 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7A58BA829A0BD4F0014F677 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A7A58BAF29A0BDEA0014F677 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		A7A58BB229A0C2AE0014F677 /* SheetLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetLines.swift; sourceTree = "<group>"; };
+		A7A58BB429A0E0110014F677 /* ClafView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClafView.swift; sourceTree = "<group>"; };
+		A7A58BB829A0EDFD0014F677 /* ChouseNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChouseNote.swift; sourceTree = "<group>"; };
+		A7A58BBC29A213E60014F677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,10 @@
 		A7A58BA029A0BD4B0014F677 /* PianoNoteApp */ = {
 			isa = PBXGroup;
 			children = (
+				A7A58BBC29A213E60014F677 /* Info.plist */,
 				A7A58BA129A0BD4B0014F677 /* PianoNoteAppApp.swift */,
 				A7A58BA329A0BD4B0014F677 /* ContentView.swift */,
+				A7A58BB129A0C2850014F677 /* ExtraViews */,
 				A7A58BA529A0BD4F0014F677 /* Assets.xcassets */,
 				A7A58BA729A0BD4F0014F677 /* Preview Content */,
 			);
@@ -65,6 +76,17 @@
 				A7A58BA829A0BD4F0014F677 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A7A58BB129A0C2850014F677 /* ExtraViews */ = {
+			isa = PBXGroup;
+			children = (
+				A7A58BAF29A0BDEA0014F677 /* NoteView.swift */,
+				A7A58BB229A0C2AE0014F677 /* SheetLines.swift */,
+				A7A58BB829A0EDFD0014F677 /* ChouseNote.swift */,
+				A7A58BB429A0E0110014F677 /* ClafView.swift */,
+			);
+			path = ExtraViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +161,10 @@
 			files = (
 				A7A58BA429A0BD4B0014F677 /* ContentView.swift in Sources */,
 				A7A58BA229A0BD4B0014F677 /* PianoNoteAppApp.swift in Sources */,
+				A7A58BB929A0EDFD0014F677 /* ChouseNote.swift in Sources */,
+				A7A58BB029A0BDEA0014F677 /* NoteView.swift in Sources */,
+				A7A58BB529A0E0110014F677 /* ClafView.swift in Sources */,
+				A7A58BB329A0C2AE0014F677 /* SheetLines.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +296,14 @@
 				DEVELOPMENT_TEAM = GCZD2DJ6AG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PianoNoteApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Learn Notes";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +311,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Drevet.Oliver.PianoNoteApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -299,11 +331,14 @@
 				DEVELOPMENT_TEAM = GCZD2DJ6AG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PianoNoteApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Learn Notes";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +346,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Drevet.Oliver.PianoNoteApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
