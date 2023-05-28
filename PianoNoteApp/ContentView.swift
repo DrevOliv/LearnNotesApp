@@ -46,19 +46,38 @@ struct ContentView: View {
                 
                 ForEach(lettersInRandom){ note in
                     
-                    Text(note.rawValue)
-                        .frame(width: 65, height: 65)
-                        .background(RoundedRectangle(cornerRadius: 10).fill(
-                            hasklicked ?
-                            note == Note ?
-                            Color.green : note == clickNote ?
-                            note == Note ?
-                            Color.green : Color.red : Color.white: Color.white
-                        ).shadow(radius: 3))
-                        .onTapGesture {
-                            clickNote = note
-                            GetRandomNote()
-                        }
+                    Button {
+                        clickNote = note
+                        GetRandomNote()
+                    } label: {
+                        Text(note.rawValue)
+                            .foregroundColor(Color.black)
+                            .frame(width: 65, height: 65)
+                            .background(RoundedRectangle(cornerRadius: 10).fill(
+                                hasklicked ?
+                                note == Note ?
+                                Color.green : note == clickNote ?
+                                note == Note ?
+                                Color.green : Color.red : Color.white: Color.white
+                            ).shadow(radius: 3))
+                    }
+                    .disabled(hasklicked)
+                    
+
+                    
+//                    Text(note.rawValue)
+//                        .frame(width: 65, height: 65)
+//                        .background(RoundedRectangle(cornerRadius: 10).fill(
+//                            hasklicked ?
+//                            note == Note ?
+//                            Color.green : note == clickNote ?
+//                            note == Note ?
+//                            Color.green : Color.red : Color.white: Color.white
+//                        ).shadow(radius: 3))
+//                        .onTapGesture {
+//                            clickNote = note
+//                            GetRandomNote()
+//                        }
                 }
             }
             .padding([.top, .bottom],90)
